@@ -1,0 +1,64 @@
+/* define colors */
+:root {
+  --dark-color: #212121;
+  --gray-color: #a8a8a8;
+  --white-color: #e7e7e7;
+}
+
+body {
+  background-color: var(--dark-color);
+  font-family: "Roboto", sans-serif;
+}
+
+/* display progress bar in the center of the screen */
+main {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#progress-container {
+  width: 400px;
+  height: 19px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* 'passed' and 'left' progress bars */
+.progress {
+  min-width: 13px;
+  height: 10px;
+  border-radius: 20px;
+}
+
+#progress-passed {
+  flex: 1; /* adjust 'passed' progress bar to all available width inside the container */
+
+  background-color: var(--gray-color);
+}
+
+#progress-left {
+  /* width of this element will be set using JS script, for instance
+
+  width: 25%;
+  
+  */
+
+  background-color: var(--white-color);
+}
+
+#percentage {
+  margin: 0 5px 0 6px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray-color);
+}
+
+/* util class for hiding elements */
+.hidden {
+  display: none;
+}

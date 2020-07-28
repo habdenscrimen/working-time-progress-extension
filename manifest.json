@@ -1,0 +1,10 @@
+{
+  "name": "Time Progress",
+  "version": "1.0.0",
+  "description": "Easy to see how much time is left until the end of the working day",
+  "manifest_version": 2,
+
+  "chrome_url_overrides" : {
+    "newtab": "src/index.html"
+  }
+}
