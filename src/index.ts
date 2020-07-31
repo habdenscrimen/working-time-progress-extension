@@ -7,8 +7,8 @@ const progressLeftElement = document.querySelector<HTMLElement>('#progress-left'
 
 // config object
 const config: Config = {
-  startHours: 22,
-  endHours: 25,
+  startTime: 1596227400000,
+  duration: 1, // in the hours
 
   onUpdatePercentage: (percentage) => {
     percentageElement.innerHTML = `${percentage}%`

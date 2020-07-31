@@ -1,6 +1,6 @@
 export interface Config {
-  startHours: number
-  endHours: number
+  startTime: number
+  duration: number
 
   onUpdatePercentage: (percentage: number) => void
   onFinish: () => void

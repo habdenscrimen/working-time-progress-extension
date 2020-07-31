@@ -1,24 +1,22 @@
 import { Config } from './types'
 
 export class Percentage {
-  constructor(private config: Config) {}
+  private startTime: Date
+  private endTime: Date
 
-  private get startTime() {
-    return new Date().setHours(this.config.startHours, 0, 0, 0)
-  }
+  constructor(private config: Config) {
+    this.startTime = new Date(this.config.startTime)
 
-  private get endTime() {
-    return new Date().setHours(this.config.endHours, 0, 0, 0)
+    this.endTime = new Date()
+    this.endTime.setHours(this.startTime.getHours() + this.config.duration)
   }
 
   private calculatePercentage = () => {
-    // calculate the difference between 'start' and 'end' time
-    const total = this.endTime - this.startTime
-    // how much 'time' has passed now
-    const passed = new Date().getTime() - this.startTime
+    const now = new Date().getTime()
+    const start = this.startTime.getTime()
+    const end = this.endTime.getTime()
 
-    // update percentage
-    return Math.round((passed * 100) / total)
+    return Math.round(((now - start) / (end - start)) * 100)
   }
 
   public render = () => {
