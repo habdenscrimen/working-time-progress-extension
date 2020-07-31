@@ -1,0 +1,24 @@
+{
+  "name": "time-progress-extension",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:habdenscrimen/time-progress-extension.git",
+  "author": "Viacheslav Yefremov <habdenscrimen@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx parcel watch src/index.html --public-url ./",
+    "build": "npx parcel build src/index.html --experimental-scope-hoisting --no-source-maps --public-url ./",
+    "check": "prettier --check './!(node_modules|dist)/**/*.{ts,tsx,js,jsx}'"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "parcel-plugin-compress": "^2.0.2",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
+  }
+}
