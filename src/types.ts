@@ -3,5 +3,7 @@ export interface Config {
   duration: number
 
   onUpdatePercentage: (percentage: number) => void
-  onFinish: () => void
+
+  beforeWork: () => void
+  afterWork: () => void
 }

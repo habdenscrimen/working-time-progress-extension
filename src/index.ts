@@ -7,14 +7,19 @@ const progressLeftElement = document.querySelector<HTMLElement>('#progress-left'
 
 // config object
 const config: Config = {
-  startTime: 1596227400000,
+  startTime: 1596236400000,
   duration: 1, // in the hours
 
   onUpdatePercentage: (percentage) => {
     percentageElement.innerHTML = `${percentage}%`
     progressLeftElement.style.width = `${100 - percentage}%`
   },
-  onFinish: () => {
+
+  beforeWork: () => {
+    percentageElement.classList.add('hidden')
+    progressLeftElement.classList.add('hidden')
+  },
+  afterWork: () => {
     percentageElement.classList.add('hidden')
     progressLeftElement.classList.add('hidden')
   },
