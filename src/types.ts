@@ -7,3 +7,8 @@ export interface Config {
   beforeWork: () => void
   afterWork: () => void
 }
+
+export interface StartWorkingTime {
+  hours: string
+  minutes: string
+}

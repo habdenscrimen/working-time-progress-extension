@@ -34,13 +34,13 @@ main {
   border-radius: 20px;
 }
 
-#progress-passed {
+#progress_passed {
   flex: 1; /* adjust 'passed' progress bar to all available width inside the container */
 
   background-color: var(--gray-color);
 }
 
-#progress-left {
+#progress_left {
   /* width of this element will be set using JS script, for instance
 
   width: 25%;

@@ -4,7 +4,13 @@
   "description": "Easy to see how much time is left until the end of the working day",
   "manifest_version": 2,
 
+  "permissions": ["storage"],
+
   "chrome_url_overrides" : {
     "newtab": "dist/index.html"
+  },
+
+  "browser_action": {
+    "default_popup": "dist/popup.html"
   }
 }

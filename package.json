@@ -6,13 +6,14 @@
   "author": "Viacheslav Yefremov <habdenscrimen@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npx parcel watch src/index.html --public-url ./",
-    "build": "npx parcel build src/index.html --experimental-scope-hoisting --no-source-maps --public-url ./",
+    "start": "npx parcel watch src/*.html src/**/*.html --public-url ./",
+    "build": "npx parcel build src/*.html src/**/*.html --experimental-scope-hoisting --no-source-maps --public-url ./",
     "check": "prettier --check './!(node_modules|dist)/**/*.{ts,tsx,js,jsx}'"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.1",
+    "@types/chrome": "0.0.122",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "parcel-bundler": "^1.12.4",
