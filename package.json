@@ -1,8 +1,8 @@
 {
-  "name": "time-progress-extension",
+  "name": "working-time-progress-extension",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:habdenscrimen/time-progress-extension.git",
+  "repository": "git@github.com:habdenscrimen/working-time-progress-extension.git",
   "author": "Viacheslav Yefremov <habdenscrimen@gmail.com>",
   "license": "MIT",
   "scripts": {
