@@ -1,0 +1,32 @@
+/* define colors */
+:root {
+  --dark-color: #212121;
+  --gray-color: #a8a8a8;
+  --white-color: #e7e7e7;
+}
+
+body {
+  background-color: var(--white-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  width: 153px;
+  padding: 5px;
+}
+
+label {
+  font-size: 14px;
+}
+
+input {
+  margin-top: 5px;
+}
+
+#working_duration {
+  display: block;
+  width: 35px;
+}
+
+.separator {
+  margin: 15px 0;
+}

@@ -14,7 +14,10 @@ export const setStartWorkingTime = ({ hours, minutes }: StartWorkingTime) =>
 export const getStartWorkingTime = (): Promise<StartWorkingTime> =>
   new Promise((resolve) => {
     chrome.storage.sync.get('startWorkingTime', (result) => {
-      resolve(result?.startWorkingTime || { hours: '09', minutes: '00' })
+      resolve({
+        hours: result?.startWorkingTime.hours || '09',
+        minutes: result?.startWorkingTime.minutes || '00',
+      })
     })
   })
 
