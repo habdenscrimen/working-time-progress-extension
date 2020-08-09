@@ -1,16 +1,16 @@
 {
   "name": "Time Progress",
   "version": "1.0.0",
-  "description": "Easy to see how much time is left until the end of the working day",
+  "description": "Control your working time - see how much of it has passed.",
   "manifest_version": 2,
 
   "permissions": ["storage"],
 
   "chrome_url_overrides" : {
-    "newtab": "dist/index.html"
+    "newtab": "index.html"
   },
 
   "browser_action": {
-    "default_popup": "dist/popup.html"
+    "default_popup": "popup.html"
   }
 }
