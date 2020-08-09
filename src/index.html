@@ -4,20 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
   
   <title>Time Progress</title>
 </head>
 <body>
   <main>
-    <div id="progress-container">
-      <div class="progress" id="progress_passed"></div>
-      
-      <!-- the percentage will be inside of this span -->
-      <span id="percentage"></span> 
+    <section id="container">
+      <div id="progress-container">
+        <div class="progress" id="progress_passed"></div>
+        
+        <!-- the percentage will be inside of this span -->
+        <span id="percentage"></span> 
+  
+        <div class="progress" id="progress_left"></div>
+      </div>
+  
+      <!-- the message will be inside of this div -->
+      <div id="message_container" class="hidden">
+        <!-- Rest before your work ✋ -->
 
-      <div class="progress" id="progress_left"></div>
-    </div>
+        <!-- or -->
+
+        <!-- You’ve done well 🎉 -->
+      </div>
+    </section>
   </main>
 
   <script src="./index.ts"></script>

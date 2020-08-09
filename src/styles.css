@@ -15,8 +15,14 @@ main {
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#container {
+  height: 88px;
+  margin-top: 69px;
 }
 
 #progress-container {
@@ -58,7 +64,19 @@ main {
   color: var(--gray-color);
 }
 
+#message_container {
+  margin-top: 43px;
+
+  display: flex;
+  justify-content: center;
+
+  font-weight: 100;
+  color: var(--white-color);
+  font-size: 16px;
+}
+
+
 /* util class for hiding elements */
 .hidden {
-  display: none;
+  display: none !important;
 }

@@ -9,19 +9,19 @@ export class Percentage {
     this.endDate = new Date(this.config.startTime + this.config.duration * 60 * 60 * 1000)
   }
 
-  get nowTime() {
+  private get nowTime() {
     return new Date().getTime()
   }
 
-  get startTime() {
+  private get startTime() {
     return this.startDate.getTime()
   }
 
-  get endTime() {
+  private get endTime() {
     return this.endDate.getTime()
   }
 
-  get status() {
+  private get status() {
     return this.nowTime > this.endTime
       ? 'after'
       : this.nowTime < this.startTime

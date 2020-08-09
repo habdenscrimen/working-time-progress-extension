@@ -4,6 +4,21 @@ import { getStartWorkingTime, getWorkingDuration } from './storage'
 // query percentage element
 const percentageElement = document.querySelector<HTMLElement>('#percentage')!
 const progressLeftElement = document.querySelector<HTMLElement>('#progress_left')!
+const messageContainerElement = document.querySelector<HTMLElement>('#message_container')!
+
+/** Hide html elements. */
+const hideElements = (elements: HTMLElement[]) => {
+  elements.forEach((element) => {
+    element.classList.add('hidden')
+  })
+}
+
+/** Show html elements. */
+const showElements = (elements: HTMLElement[]) => {
+  elements.forEach((element) => {
+    element.classList.remove('hidden')
+  })
+}
 
 // start application
 const start = async () => {
@@ -24,17 +39,24 @@ const start = async () => {
     duration: workingDuration, // in the hours
 
     onUpdatePercentage: (percentage) => {
+      hideElements([messageContainerElement])
+      showElements([percentageElement, progressLeftElement])
+
       percentageElement.innerHTML = `${percentage}%`
       progressLeftElement.style.width = `${100 - percentage}%`
     },
 
     beforeWork: () => {
-      percentageElement.classList.add('hidden')
-      progressLeftElement.classList.add('hidden')
+      hideElements([percentageElement, progressLeftElement])
+
+      messageContainerElement.innerHTML = 'Rest before your work ✋'
+      showElements([messageContainerElement])
     },
     afterWork: () => {
-      percentageElement.classList.add('hidden')
-      progressLeftElement.classList.add('hidden')
+      hideElements([percentageElement, progressLeftElement])
+
+      messageContainerElement.innerHTML = 'You’ve done well 🎉'
+      showElements([messageContainerElement])
     },
   })
 
